@@ -58,7 +58,7 @@
              </div>
              
              <div class="form-boton"> 
-                <input type="submit" value="enviar"
+                <input type="submit" value="enviar">
             </div>
             <p class="mensajeCorrecto"></p>
             <button class="modal_close">X</button>

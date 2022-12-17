@@ -20,10 +20,6 @@ form.addEventListener("submit", (e) => {
         mostrarMensajeError("surname", "Apellidos no validos*")
      }
 
-     if (documentoIdentidad.value.length < 1 || documentoIdentidad.value.trim() == ""){
-        mostrarMensajeError("mobile", "Documento Identidad no valido*")
-     }
-
      if (correo.value.length < 1 || correo.value.trim() == ""){
         mostrarMensajeError("email", "Correo no valido*")
      }
@@ -40,13 +36,8 @@ form.addEventListener("submit", (e) => {
         mostrarMensajeError("repeatPassword", "Contrasenia no valida*")
      }
 
-     if (form.value.length < 1 || nombres.value.trim() == ""){
-        console.error("error");
+     if (!terminosYcondiciones.checked) {
+      mostrarMensajeError("termsAndConditions", "Acepte*");
      }
 
-});
-
-function mostrarMensajeError(claseInput, mensaje) {
-    let elemento = document.querySelector(`.${claseInput}`);  
-    elemento.lastElementChild.innerHTML = mensaje; 
-}
+   });
