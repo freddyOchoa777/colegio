@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\styleIndex.css">
     <link rel="stylesheet" href="css\styleLogin.css">
-    <link rel="stylesheet" href="css\estilos.css">
+    <link rel="stylesheet" href="css/styleRegistrate.css">
     <title>Colegio San José de Cafasso</title>
     <script src="https://kit.fontawesome.com/c208b720fb.js" crossorigin="anonymous"></script>
     <!-- <div class="contenedor">
@@ -61,7 +61,7 @@
             </li>
         </ul>
 
-        <li><a href="">Contactanos</a>
+        <li><a href="Mapa">Contactanos</a>
             <ul>
     </ul>
 </div>
@@ -134,61 +134,40 @@
 
 <section class="modal">
     <div class="modal_container">
+        <h2 class="modal_title">Registrate</h2>
 
-  <div class="container-form">
-      <form action="" class="form">
-          <p class="form-titulo">Registrate</p>
-      
-          <div class="form-input myname">
-              <input type="tex" id="myname">
-              <label for="myname">Nombres</label>
-              <p class="mensajeError"></p>
-           </div>
-           <div class="form-input surname">
-              <input type="tex" id="surname">
-              <label for="myname">Apellidos</label>
-              <p class="mensajeError"></p>
-           </div>
-           <div class="form-input mobile">
-             <input type="tex" id="mobile">
-             <label for="mobile">Documento Identidad</label>
-             <p class="mensajeError"></p>
-          </div>
-           <div class="form-input email">
-              <input type="tex" id="email">
-              <label for="email">Correo electrónico</label>
-              <p class="mensajeError"></p>
-           </div>
-           <div class="form-input mobile">
-              <input type="tex" id="mobile">
-              <label for="mobile">Celular</label>
-              <p class="mensajeError"></p>
-           </div>
-           <div class="form-input password">
-              <input type="password" id="password">
-              <label for="password">Contraseña</label>
-              <p class="mensajeError"></p>
-           </div>
-           <div class="form-input repeat-password">
-              <input type="password" id="repeat-password">
-              <label for="repeat-password">Repetir Contraseña</label>
-              <p class="mensajeError"></p>
-           </div>
-           <div class="form-termsAndConditions termsAndConditions">
-              <input type="checkbox" id="termsAndConditions">
-              <label for="termsAndConditions">He leído y acepto los </label>
-              <a href="#">Términos y Condiciones</a>
-           </div>
-           <div class="form-boton"> 
-              <input type="submit" value="enviar"
-          </div>
-          <p class="mensajeCorrecto"></p>
-          <button class="modal_close">X</button>
-      </form>
-  </div>
-</section>
+        <div style="width: 80%;">
+            <label class="label-formulario" for="">Nombre</label>
+        </div>
+        <input class="input-formulario" type="text" placeholder="Usuario">
 
-     <script src="js/Registrate.js"></script>
+        <div style="width: 80%;">
+            <label class="label-formulario" for="">Apellido</label>
+        </div>
+        <input class="input-formulario" type="text" placeholder="Usuario">
+
+        <div style="width: 80%;">
+            <label class="label-formulario" for="">Celular</label>
+        </div>
+        <input class="input-formulario" type="text" placeholder="Mobile">
+
+        <div style="width: 80%;">
+            <label class="label-formulario" for="">Correo</label>
+        </div>
+        <input class="input-formulario" type="text" placeholder="Email">
+
+        <div style="width: 80%;">
+            <label class="label-formulario" for="">Contraseña</label>
+        </div>
+        <input class="input-formulario" type="password" name="" id="" placeholder="Contraseña">
+
+        <button class="boton-login">Iniciar Sesión</button>
+
+        <button class="modal_close">X</button>
+    </div>   
+</section>        
+
+     <script src="js/Registrates.js"></script>
         
 </body>
 
