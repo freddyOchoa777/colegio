@@ -1,0 +1,133 @@
+/*----Generales----*/
+
+*{
+    box-sizing: border-box;
+}
+
+.body{
+    margin: 0%;
+    background: var(---cfondoForm1
+    ---cfondoForm2);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-form{
+   /* border: 3px rgb(7, 7, 7);*/
+    max-width: 90%;
+    margin: auto;
+    margin: 10px;
+}
+
+:root{
+  ---cfondo: rgba(250, 255, 250, 0.938);
+  ---cfondoForm1: rgba(58, 136, 6, 0.39);
+  ---cfondoForm2: rgba(129, 193, 202);
+  ---cnegro: #000; 
+  ---cblanco: #fff;
+  ---ctexto: #fff;
+  ---crojo: rgb(247, 14, 14);
+}
+
+
+/*----Formulario----*/
+
+.form{
+  /*  border: 10px rgb(133, 219, 93); */
+    border-top: 2px solid #000;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 5px;
+    background: linear-gradient(
+     0deg,
+     var(---cfondoForm1) 40%,
+     var(---cfondoForm2) 50%
+    );
+}
+
+.form-titulo{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    top: 20px;
+
+}
+
+.form-input{
+    margin-bottom: 30px;
+}
+
+.form-input label{
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+    color: var(---cnegro);
+}
+
+.form-input input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid var(---cnegro);
+}
+
+.form-boton input{
+    background-color: var(---cnegro);
+    color: var(---cblanco);
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.form-boton input:hover{
+    background-color: var(---cnegro);
+    color: var(---cblanco)
+
+
+}
+
+.form-input input:focus + label{
+    font-weight: bold;
+    color: var(---cnegro) 
+}    
+.mensajeError{
+    color: var(---crojo);
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(---cnegro)
+}
+
+.modal_close{
+    background-color: #F26250;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+.modal_container{
+    margin: auto;
+    max-width: 600px;
+    width: 30%;
+    background-color: rgb(235, 243, 235);;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+

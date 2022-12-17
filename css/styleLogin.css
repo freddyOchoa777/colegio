@@ -1,0 +1,71 @@
+.modal{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal_container{
+    margin: auto;
+    max-width: 600px;
+    width: 30%;
+    background-color: rgb(235, 243, 235);;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.label-formulario{
+    font-size: 18px;
+    justify-content: left;
+}
+
+.input-formulario{
+    margin-bottom: 15px;
+    margin-top: 3px;
+    width: 80%;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.modal_close{
+    background-color: #F26250;
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+.boton-login{
+    color: white;
+    background-color: #F26250;
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.boton-login:hover{
+    background-color: white;
+    color: #F26250;
+}
+
+.modal-show{
+    opacity: 1;
+    pointer-events: unset;
+}

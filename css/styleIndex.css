@@ -1,0 +1,309 @@
+
+ .contenedor{
+      background-color: #078907;
+      padding: 20px;
+      display: flex;
+      justify-content: right;
+ }
+
+ .Iniciar-Sesion{
+    color: #fff;
+    margin-right: 10px;
+ }
+
+ .logo-colegio{
+   max-width: 200px;
+   position: relative;
+   top: 5%;
+   left: 2%;
+}
+
+h1{
+   text-align: center;
+}
+
+/*estilos para el menu */
+
+.nav { 
+   text-align:center;
+
+}
+
+.contenedor-menu{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+}
+
+
+.nav li a {
+   height: 25px;
+   background-color:#f5f5af;
+   display: block;
+   padding: 8px 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
+   color: rgb(83, 80, 80);
+
+ }
+
+ #header {
+   margin:auto;
+   width:600px;
+   font-family:Arial, Helvetica, sans-serif;
+
+}
+
+ul, ol {
+   list-style:none;
+}
+
+.nav > li {
+   float:left;
+  
+}
+
+.nav li a:hover {
+   background-color:#d3d3cb;
+}
+
+.nav li ul {
+   display:none;
+   position:absolute;
+   min-width:95px;
+   z-index: 1000;
+
+}
+
+.nav li:hover > ul {
+   display:block;
+}
+
+.nav li ul li {
+   position:relative;
+}
+
+.nav li ul li ul {
+   right:-140px;
+   top:0px;
+}
+
+ul li{
+   list-style: none;
+}
+
+nav li ul li{
+   position: relative;
+
+}
+
+nav li a li{
+   position: absolute;
+}
+
+ .banner{
+   width: 1000px;
+   height: 500px;
+   border: 3px solid #078907;
+   margin: auto;
+   animation: banner 20s infinite linear alternate;
+   background-size: 100% 100%;
+   position: relative;
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   margin-top: 0.2%;
+}
+
+@keyframes banner {
+      0%, 20%{ 
+         background-image: url(../img/Contenido/agua.jpg);
+
+          }
+
+   25%, 45%{ 
+      background-image: url(../img/Contenido/images.jpeg);
+       }
+
+       50%, 70%{ 
+         background-image: url(../img/Contenido/sol.jpg);
+          }
+
+          75%, 85%{ 
+            background-image: url(../img/Contenido/luna.jpeg);
+             }
+
+             100%, 100%{ 
+               background-image: url(../img/Contenido/oscuro.jpg);
+                }
+}
+
+#news-feed .news-block {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+#news-feed .news-block .left-block {
+    width: 50%;
+    background: rgb(121, 235, 121);
+    margin-top: 4%;
+    padding: 35px 30px ;
+    right: 30px;
+    
+}
+
+#news-feed .news-block .right-block {
+   width: 50%;
+   background: rgb(177, 233, 163);
+   margin-top: 4%;
+   padding: 35px 30px ;
+
+}
+#news-feed h1{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   text-align: left;
+}
+
+#news-feed p{
+   font-size: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: black;
+   text-align: justify;
+   text-align: left;
+
+}
+
+.contenedor-fonts{
+   background-color: #cdeb4c;
+   width: 1200px;
+   height: 700px;
+   padding: 50px 70px;
+   margin-top: 2%;
+}
+
+/* estilos para el footer */
+
+footer {
+   width: 100%;
+   padding: 20px 0px;
+   
+}
+.container__footer{
+   display: grid;
+   grid-template-columns: repeat(3, 300px);
+   grid-gap: 60px; 
+   max-width: 1000px;
+   margin: auto;
+}
+.box__footer{
+   display: flex;
+   flex-direction: column;
+   padding: 5px;
+   
+}
+footer{
+   width: 100%;
+   padding: 20px 0px;
+}
+
+#titulo__footer{   
+   width: 500px;
+   margin: 10px 240px;
+   font-size: 25px;
+
+}
+
+.flex-container{
+   display: flex;
+}
+
+.flex-item{
+   padding: 10px;
+   margin: 100px;
+   width: 700px;
+   margin-top: 0.5px;
+}
+
+.icon{
+   font-size: 25px;
+   background-color: #cdeb4c;
+   padding: 8px;
+   margin-bottom: 15px;
+ }
+
+ .links{
+   text-decoration: none;
+ }
+
+ body {
+    margin: 0;
+ } 
+
+
+
+/* banner */
+.containeBanner{
+   height: 80px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: end;
+   background-color: rgb(4, 153, 12);
+}
+
+.container-imagen{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.btn-class{
+   height: 35px;
+   border-radius: 6px;
+   margin-right: 20px;
+}
+
+.btn-class-login{
+   height: 35px;
+   border-radius: 6px;
+   margin-right: 20px;
+   text-decoration: none;
+}
+
+.buscador-class{
+   height: 30px;
+   border-radius: 6px;
+}
+
+.logo-colegio{
+   height: 200px;
+}
+
+.container-principal-tarjetas{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.container-tarjetas{
+   display: flex;
+   flex-direction: row;
+   width: 60%;
+}
+
+.saludo{
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   justify-content: center;
+}
+
+.tamañoTexto{
+   width: 40%;
+   padding: 15px;
+}

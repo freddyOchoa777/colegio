@@ -1,0 +1,82 @@
+.franja-superior{
+    background-color: #257415;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+}
+.franja-inferior{
+    background-color: #f6f64f;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+}
+h1{
+    text-align: center;
+    color: #091e05;
+} 
+#admisiones .admisiones-block{
+    display: flex;
+    width: 75%;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+.left-block {
+    width: 100%;    
+    margin-top: 0.5%;
+    padding: 5px 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px; 
+    text-align: justify;
+}
+.right-block {
+    width: 50%;   
+    margin-top: 0.5%;
+    padding: 5px 5px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+ }
+ .admisión{
+     width: 380px;
+     padding-top: 120px;
+ } 
+ #admisiones-requisitos .admisiones-block2{
+    display: flex;
+    width: 75%;
+    margin-left: 20px;
+    margin-bottom: 0px;    
+}
+.left-block2 {
+    width: 100%;    
+    margin-top: 0.5%;
+    padding: 5px 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px; 
+    text-align: justify;
+}
+.right-block2 {
+    width: 100%;    
+    margin-top: 0.5%;
+    padding: 5px 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px; 
+    text-align: justify;
+}
+
+a{
+    display: block;
+    width: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #0d0e0d;
+    border-radius: 10px;
+    margin: 50px 760px;
+    padding: 15px 43px;
+    background-color: #d2da69;
+    text-align: justify;
+
+}
+

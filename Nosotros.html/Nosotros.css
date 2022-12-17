@@ -1,0 +1,155 @@
+.franja-superior{
+    background-color: #257415;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+}
+h1{
+    padding: 25px;
+    margin: 20px 5px;
+    margin-left: 150px;
+    margin-top: 2px;
+    color: #091e05;
+}
+#reseña .reseña-block {
+    display: flex;
+    width: 75%;
+    margin-left: 80px;
+    margin-bottom: 0px;
+}
+.left-block {
+    width: 100%;    
+    margin-top: 0.5%;
+    padding: 5px 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px; 
+    text-align: justify;
+}
+.right-block {
+   width: 50%;   
+   margin-top: 0.5%;
+   padding: 5px 5px;
+   margin-left: 200px;
+   margin-bottom: 10px;
+}
+.clase{
+    width: 250px;
+    padding-top: 60px;
+}
+.horizonte-institucional{
+    padding: 10px;
+    margin: 100px;
+    margin-top: 5px;
+}
+.h-institucional{
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+hr{
+    margin-top: 30px;
+}
+.misión{
+    padding: 10px;
+    margin: 100px;
+    margin-top: 5px;
+}
+.col-misión{
+    margin: auto;
+    margin-top: 2px;
+    text-align: justify;
+    margin-bottom: 2px;
+}
+.visión{
+    padding: 10px;
+    margin: 100px;
+    margin-top: 5px;
+}
+.col-visión{
+    margin: auto;
+    margin-top: 2px;
+    text-align: justify;
+    margin-bottom: 2px;
+}
+.objetivos{
+    padding: 10px;
+    margin: 100px;
+    text-align: justify;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+.simbolos{
+    padding: 10px;
+    margin: 100px;
+    margin-top: 5px;
+}
+#simbolos .col-simbolos{
+    padding: 10px;
+    display: flex;
+    width: 75%;
+    margin: 100px;    
+    margin-top: 5px;
+    margin-bottom: 0px;
+    justify-content: space-between; 
+}
+.escudo{
+    max-width: 200px;
+    margin: auto;
+    display: inline-block;
+}
+.bandera{
+    max-width: 150px;
+    margin: auto;
+    display: inline-block;
+}
+.himno{
+    padding: 20px;
+    text-align: center;
+}
+.col-himno1{
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    justify-content: flex-start;
+    margin-bottom: 20px;    
+}
+.col-himno2{
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    justify-content: flex-start; 
+    margin-bottom: 20px;   
+}
+.col-himno3{
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    justify-content: flex-start;
+    margin-bottom: 20px;      
+}
+.manual-convivencia{
+    display: block;
+    width: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    padding: 10px 20px;
+    margin-top: 2px;
+    border-radius: 10px;
+    background-color: #eef6ed;    
+}
+.manual-convivencia:hover{
+    background-color: transparent;
+    border: 2px solid #eef6ed;
+    color: #f6f64f;
+}
+
+/*estilos para el footer*/
+
+footer{
+    background-color: #f6f64f;
+    padding: 25px;  
+    width: 100%;
+    margin-top: 20px;
+}
