@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\styleIndex.css">
-    <link rel="stylesheet" href="css\styleLogin.css">
+    <link rel="stylesheet" href="assets/css/styleIndex.css">
+    <link rel="stylesheet" href="assets/css/styleLogin.css">
     <link rel="stylesheet" href="css\estilos.css">
     <title>Colegio San José de Cafasso</title>
     <script src="https://kit.fontawesome.com/c208b720fb.js" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
             <input class="buscador-class" type="text" name="" id="" placeholder="Buscar">
             <button class="btn-class">Buscar</button>
             <button class="btn-class-login">Iniciar Sesion</button>
-            <button class="btn-class-login"><a href="http://127.0.0.1:5500/Registrate.html/Registrate.html?#">Registrate</a></button>
+            <button class="btn-class-login"><a href="?controller=Home&method=RegisterScreen">Registrate</a></button>
         </div>
     </div>
    
@@ -32,7 +32,7 @@
     <div id="header">
         <center>
         <div>
-            <div><img class="logo-colegio" src="/img/Noticias/Logo_San_José_de_Cafasso.png" alt="Logo_San_José_de_Cafasso"></div>
+            <div><img class="logo-colegio" src="assets/img/Noticias/Logo_San_José_de_Cafasso.png" alt="Logo_San_José_de_Cafasso"></div>
             <div>
                 <hr width="340px" size="3px" color="#fff176">
             </div>
@@ -129,7 +129,7 @@
 
 </section>
 
-<script src="js/main.js"></script>
+<script src="assets/js/main.js"></script>
 
 
 <section class="modal">
