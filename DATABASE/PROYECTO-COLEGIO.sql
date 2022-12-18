@@ -1,4 +1,3 @@
-DROP TABLE IF exists `acudiente`;
 DROP database IF exists `san-jose-cafasso`;
 CREATE database if not exists `San-Jose-Cafasso`;
 USE `San-Jose-Cafasso`;
@@ -56,6 +55,16 @@ CREATE TABLE IF NOT EXISTS `CursoMateria` (
 ALTER TABLE CursoMateria ADD FOREIGN KEY(idCurso) REFERENCES Curso (idCurso);
 ALTER TABLE CursoMateria ADD FOREIGN KEY(idMateria) REFERENCES Materia (idMateria);
 
+CREATE TABLE IF NOT EXISTS `Acudiente` (
+  `idAcudiente` INT NOT NULL AUTO_INCREMENT,
+  `Nombre` VARCHAR(45) NOT NULL,
+  `Apellidos` VARCHAR(45) NOT NULL,
+  `Telefono` VARCHAR(45) NOT NULL,
+  `idUsuario` INT NOT NULL,
+  PRIMARY KEY (`idAcudiente`)
+  );
+ALTER TABLE Acudiente ADD FOREIGN KEY(idUsuario) REFERENCES Usuario (idUsuario);
+
   CREATE TABLE IF NOT EXISTS `Estudiante` (
   `idEstudiante` INT NOT NULL AUTO_INCREMENT ,
   `Nombres` VARCHAR(45) NOT NULL,
@@ -70,12 +79,4 @@ ALTER TABLE Estudiante ADD FOREIGN KEY(idCurso) REFERENCES Curso (idCurso);
 ALTER TABLE Estudiante ADD FOREIGN KEY(idAcudiente) REFERENCES Acudiente (idAcudiente);
 ALTER TABLE Estudiante ADD FOREIGN KEY(idMatricula) REFERENCES Matricula (idMatricula);
 
-  CREATE TABLE IF NOT EXISTS `Acudiente` (
-  `idAcudiente` INT NOT NULL AUTO_INCREMENT,
-  `Nombre` VARCHAR(45) NOT NULL,
-  `Apellidos` VARCHAR(45) NOT NULL,
-  `Telefono` VARCHAR(45) NOT NULL,
-  `idUsuario` INT NOT NULL,
-  PRIMARY KEY (`idAcudiente`)
-  );
-ALTER TABLE Acudiente ADD FOREIGN KEY(idUsuario) REFERENCES Usuario (idUsuario);
+  

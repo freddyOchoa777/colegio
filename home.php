@@ -115,7 +115,7 @@
         <div style="width: 80%;">
             <label class="label-formulario" for="">Usuario</label>
         </div>
-        <input class="input-formulario" type="text" placeholder="Usuario">
+        <input class="input-formulario" type="email" placeholder="Correo electrónico">
 
         <div style="width: 80%;">
             <label class="label-formulario" for="">Contraseña</label>
