@@ -39,7 +39,7 @@
 
            <div class="right-block">
             <article>       
-                <img class="admisión" src="/img/Contenido/proceso-admision.png" alt="">        
+                <img class="admisión" src="\colegio\assets\img\Contenido\proceso-admision.png" alt="">        
             </article>
           </div>
           </section>
@@ -76,7 +76,9 @@
         <hr width="340px" size="3px" color="#fff176">
     </div>
             
-             <a href="http://127.0.0.1:5500/Matr%C3%ADcula.html"target="_blank">Matrícula</a>
+             <a href="?controller=Home&method=GetMatriculaForm"target="_blank">Matrícula</a>
+            
+
 
              <a href=""target="_blank">Inscripción</a>
           

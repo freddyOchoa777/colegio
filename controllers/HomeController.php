@@ -23,5 +23,13 @@
 		{
 			require "Registrate.html/Registrate.php";
 		}
+		public function GetMatriculaForm()
+		{			
+		require "Matricula.php";
+		}
+		public function GetAdmisiones()
+		{
+			require "Admisiones.html/Admisiones.php";
+		}
      }
 ?>

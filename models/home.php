@@ -19,10 +19,10 @@
 
 		public function RegisterUser($data)
 		{
-            $dataUser['documento'] = $data['documento'];
-            $dataUser['correo'] = $data['correo'];
-            $dataUser['contrasena'] = $data['contrasena'];
-            if ($data['contrasena'] !== $data['contraseñados']) {
+            $dataUser['Documento'] = $data['Documento'];
+            $dataUser['Correo'] = $data['Correo'];
+            $dataUser['Contrasena'] = $data['Contrasena'];
+            if ($data['Contrasena'] !== $data['Contraseñados']) {
                 echo("LA CONTRASEÑA NO ES LA MISMA");
                 die();
             }else{
@@ -33,10 +33,10 @@
                 }
                 try {
                     $LastUserId = $this->getLastIdUser();
-                    if(str_contains($data['correo'], '@sanjosecafasso.com')){
-                        $dataProfesor['nombre'] = $data['nombre'];
-                        $dataProfesor['apellidos'] = $data['apellidos'];
-                        $dataProfesor['Telefono'] = $data['Telefono'];
+                    if(str_contains($data['Correo'], '@sanjosecafasso.com')){
+                        $dataProfesor['Nombre'] = $data['Nombre'];
+                        $dataProfesor['Apellidos'] = $data['Apellidos'];
+                        $dataProfesor['Teléfono'] = $data['Teléfono'];
                         $dataProfesor['idUsuario'] = $LastUserId[0]->id;
                         try {
                             $this->pdo->insert('Profesor', $dataProfesor);
@@ -44,12 +44,11 @@
                             die($e->getMessage());
                         }
                     }else{
-                        $dataAcudiente['nombre'] = $data['nombre'];
-                        $dataAcudiente['apellidos'] = $data['apellidos'];
-                        $dataAcudiente['Telefono'] = $data['Telefono'];
+                        $dataAcudiente['Nombre'] = $data['Nombre'];
+                        $dataAcudiente['Apellidos'] = $data['Apellidos'];
+                        $dataAcudiente['Teléfono'] = $data['Teléfono'];
                         $dataAcudiente['idUsuario'] = $LastUserId[0]->id;
-                        var_dump($dataAcudiente);
-                        try {
+                try {
                             $this->pdo->insert('Acudiente', $dataAcudiente);
                         } catch(PDOException $e) {
                             die($e->getMessage());

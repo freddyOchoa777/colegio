@@ -114,6 +114,7 @@ nav li a li{
    justify-items: center;
    align-items: center;
    margin-top: 0.2%;
+   margin-bottom: 40px;
 }
 
 @keyframes banner {
@@ -213,8 +214,8 @@ footer{
 #titulo__footer{   
    width: 500px;
    margin: 10px 240px;
+   margin-top: 20px;
    font-size: 25px;
-
 }
 
 .flex-container{

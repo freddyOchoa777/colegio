@@ -8,8 +8,8 @@
 		private $host = 'localhost';	
 		private $dbName = 'san-jose-cafasso';
 		private $charset = 'utf8';
-		private $user = 'root';
-		private $password = '';
+		private $user = 'admin';
+		private $password = '1111';
 
 		// sobre carga al constructor con cadena de conexión a la BD.
 		public function __construct()
