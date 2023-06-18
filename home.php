@@ -122,20 +122,21 @@
 <section class="modal">
     <div class="modal_container">
         <h2 class="modal_title">Inicio de Sesión</h2>
-
+        <form action="?controller=Login&method=validarCredenciales" method="POST" class="form">
         <div style="width: 80%;">
             <label class="label-formulario" for="">Usuario</label>
         </div>
-        <input class="input-formulario" type="email" placeholder="Correo Electrónico">
+        <input class="input-formulario" name="Correo" type="email" placeholder="Correo Electrónico">
 
         <div style="width: 80%;">
             <label class="label-formulario" for="">Contraseña</label>
         </div>
-        <input class="input-formulario" type="password" name="" id="" placeholder="Contraseña">
+        <input class="input-formulario" type="password" name="Contraseña" id="" placeholder="Contraseña">
 
-        <button class="boton-login">Iniciar Sesión</button>
+        <button type="Submit" class="boton-login">Iniciar Sesión</button>
 
         <button class="modal_close">X</button>
+        </form>    
     </div>
 
 </section>

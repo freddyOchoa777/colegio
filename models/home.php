@@ -36,7 +36,7 @@
                     if(str_contains($data['Correo'], '@sanjosecafasso.com')){
                         $dataProfesor['Nombre'] = $data['Nombre'];
                         $dataProfesor['Apellidos'] = $data['Apellidos'];
-                        $dataProfesor['Teléfono'] = $data['Teléfono'];
+                        $dataProfesor['Telefono'] = $data['Telefono'];
                         $dataProfesor['idUsuario'] = $LastUserId[0]->id;
                         try {
                             $this->pdo->insert('Profesor', $dataProfesor);
@@ -46,7 +46,7 @@
                     }else{
                         $dataAcudiente['Nombre'] = $data['Nombre'];
                         $dataAcudiente['Apellidos'] = $data['Apellidos'];
-                        $dataAcudiente['Teléfono'] = $data['Teléfono'];
+                        $dataAcudiente['Telefono'] = $data['Telefono'];
                         $dataAcudiente['idUsuario'] = $LastUserId[0]->id;
                 try {
                             $this->pdo->insert('Acudiente', $dataAcudiente);

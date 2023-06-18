@@ -17,22 +17,22 @@
             <p class="form-titulo">Registrate</p>
         
             <div class="form-input myname">
-                <input required type="text" id="myname" name="nombre">
+                <input required type="text" id="myname" name="Nombre">
                 <label for="myname">Nombres</label>
                 <p class="mensajeError"></p>
              </div>
              <div class="form-input surname">
-                <input required type="text" id="surname" name="apellidos">
+                <input required type="text" id="surname" name="Apellidos">
                 <label for="myname">Apellidos</label>
                 <p class="mensajeError"></p>
              </div>
              <div class="form-input mobile">
-               <input  required type="number" id="mobile" name="documento">
+               <input  required type="number" id="mobile" name="Documento">
                <label for="mobile">Documento Identidad</label>
                <p class="mensajeError"></p>
             </div>
              <div class="form-input email">
-                <input required type="email" id="email" name="correo">
+                <input required type="email" id="email" name="Correo">
                 <label for="email">Correo electrónico</label>
                 <p class="mensajeError"></p>
              </div>
@@ -42,12 +42,12 @@
                 <p class="mensajeError"></p>
              </div>
              <div class="form-input password">
-                <input required type="password" name="contrasena" id="password">
+                <input required type="password" name="Contrasena" id="password">
                 <label for="password">Contraseña</label>
                 <p class="mensajeError"></p>
              </div>
              <div class="form-input repeat-password">
-                <input required type="password" name="contraseñados" id="repeat-password">
+                <input required type="password" name="Contraseñados" id="repeat-password">
                 <label for="repeat-password">Repetir Contraseña</label>
                 <p class="mensajeError"></p>
              </div>
