@@ -1,3 +1,20 @@
+<?php
+// Obtener el tamaño de la fuente actual de la sesión o establecer un valor predeterminado
+$fontSize = isset($_SESSION['font_size']) ? $_SESSION['font_size'] : 16;
+
+// Verificar si se hizo clic en el botón de aumentar tamaño
+if (isset($_POST['increase'])) {
+    $fontSize += 2; // Aumentar el tamaño en 2 píxeles
+    $_SESSION['font_size'] = $fontSize; // Guardar el nuevo tamaño en la sesión
+}
+
+// Verificar si se hizo clic en el botón de disminuir tamaño
+if (isset($_POST['decrease'])) {
+    $fontSize -= 2; // Disminuir el tamaño en 2 píxeles
+    $_SESSION['font_size'] = $fontSize; // Guardar el nuevo tamaño en la sesión
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +33,37 @@
         </form>
         <div><a href="">Iniciar Sesión</a></div>            
     </div>   -->   
-    
+    <style>
+    .floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    }
+
+    .floating-button button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    background-color: #333;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    }
+
+    .floating-button button:hover {
+    opacity: 1;
+    cursor: pointer;
+    }
+
+    p {
+            font-size: <?php echo $fontSize; ?>px;
+    }
+
+    </style>
     <div>
         <div class="containeBanner">
             <input class="buscador-class" type="text" name="" id="" placeholder="Buscar">
@@ -29,6 +76,13 @@
 </head>
 
 <body>
+<div class="floating-button">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <button type="submit" name="increase">A+</button>
+            <button type="submit" name="decrease">A-</button>
+        </form>
+    </div>
+
     <div id="header">
         <center>
         <div>
@@ -224,5 +278,4 @@
                             </div>
                 </div>
 </footer>
-    
 </html>

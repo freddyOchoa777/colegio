@@ -1,12 +1,15 @@
 <?php
 	require 'models/login.php';
+	require 'models/home.php';
 	class LoginController
 	{		
 		private $model;
+		private $modelHome;
 
 		public function __construct()
 		{
 			$this->model = new login;
+			$this->modelHome = new home;
 		}
 
 		public function index()
@@ -17,14 +20,14 @@
 		public function validarCredenciales()
 		{
 			$validarCredenciales= $this->model->ValidarCredenciales($_POST);
-            
-
             if (sizeof ($validarCredenciales) == 1)  {
-                echo("si existe");
-            
-            }else{echo("no existe");}
-			 die ();
-            require "home.php";
+                $dataUsers =  $this->modelHome->getAllUsers();
+				$email=$_POST['Correo'];
+				require "dashboard.php";
+            }else{
+				echo("no existe usuario");
+				die ();
+			}
 		}
      }
 ?>

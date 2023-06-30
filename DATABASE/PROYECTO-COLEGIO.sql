@@ -79,4 +79,27 @@ ALTER TABLE Estudiante ADD FOREIGN KEY(idCurso) REFERENCES Curso (idCurso);
 ALTER TABLE Estudiante ADD FOREIGN KEY(idAcudiente) REFERENCES Acudiente (idAcudiente);
 ALTER TABLE Estudiante ADD FOREIGN KEY(idMatricula) REFERENCES Matricula (idMatricula);
 
-  
+INSERT INTO `curso`(`idCurso`, `Nombre`) VALUES (1, 'Matemáticas');
+INSERT INTO `curso`(`idCurso`, `Nombre`) VALUES (2, 'Ciencias');
+INSERT INTO `curso`(`idCurso`, `Nombre`) VALUES (3, 'Historia');
+
+INSERT INTO `matricula`(`idMatricula`, `Fecha`) VALUES (101, '2023-01-01');
+INSERT INTO `matricula`(`idMatricula`, `Fecha`) VALUES (102, '2023-01-02');
+INSERT INTO `matricula`(`idMatricula`, `Fecha`) VALUES (103, '2023-01-03');
+
+INSERT INTO `usuario`(`idUsuario`, `correo`, `contrasena`, `documento`) VALUES (301, 'pedro@example.com', 'password123', '1234567890');
+INSERT INTO `usuario`(`idUsuario`, `correo`, `contrasena`, `documento`) VALUES (302, 'maria@example.com', 'password456', '0987654321');
+INSERT INTO `usuario`(`idUsuario`, `correo`, `contrasena`, `documento`) VALUES (303, 'juan@example.com', 'password789', '9876543210');
+
+
+INSERT INTO `acudiente`(`idAcudiente`, `Nombre`, `Apellidos`, `Telefono`, `idUsuario`) VALUES (201, 'Pedro', 'González', '123456789', 301);
+INSERT INTO `acudiente`(`idAcudiente`, `Nombre`, `Apellidos`, `Telefono`, `idUsuario`) VALUES (202, 'María', 'López', '987654321', 302);
+INSERT INTO `acudiente`(`idAcudiente`, `Nombre`, `Apellidos`, `Telefono`, `idUsuario`) VALUES (203, 'Juan', 'Pérez', '456789123', 303);
+
+INSERT INTO `usuario`(`idUsuario`, `correo`, `contrasena`, `documento`) VALUES (304, 'usuario1@example.com', 'contraseña1', '1234567890');
+INSERT INTO `usuario`(`idUsuario`, `correo`, `contrasena`, `documento`) VALUES (305, 'usuario2@example.com', 'contraseña2', '0987654321');
+INSERT INTO `usuario`(`idUsuario`, `correo`, `contrasena`, `documento`) VALUES (306, 'usuario3@example.com', 'contraseña3', '9876543210');
+
+INSERT INTO `profesor`(`idProfesor`, `Nombre`, `Apellidos`, `Dirección`, `Telefono`, `idUsuario`) VALUES (401, 'Juan', 'Pérez', 'Calle 123', '123456789', 304);
+INSERT INTO `profesor`(`idProfesor`, `Nombre`, `Apellidos`, `Dirección`, `Telefono`, `idUsuario`) VALUES (402, 'María', 'López', 'Avenida 456', '987654321', 305);
+INSERT INTO `profesor`(`idProfesor`, `Nombre`, `Apellidos`, `Dirección`, `Telefono`, `idUsuario`) VALUES (403, 'Carlos', 'González', 'Calle Principal', '456789123', 306);

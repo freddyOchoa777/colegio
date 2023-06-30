@@ -17,11 +17,21 @@
 		public function registerUser()
 		{
 			$registerUser= $this->model->RegisterUser($_POST);
-			require "home.php";
+			if($registerUser === true){
+				$dataUsers =  $this->model->getAllUsers();
+				$email =  $_POST["Correo"];
+				require "dashboard.php";
+			}else{
+				require "home.php";
+			}
 		}
 		public function RegisterScreen()
 		{
 			require "Registrate.html/Registrate.php";
+		}
+		public function Salir()
+		{
+			require "home.php";
 		}
 		public function GetMatriculaForm()
 		{			

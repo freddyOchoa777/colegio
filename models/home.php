@@ -58,11 +58,26 @@
                     die($e->getMessage());
                 }
             }
+            return true;
         }
         public function getLastIdUser()
 		{
              try {
                     $strSql = "SELECT MAX(idUsuario) as id FROM usuario";
+                    $query = $this->pdo->select($strSql);
+                    return $query; 
+                } catch(PDOException $e) {
+                    die($e->getMessage());
+                }
+        }
+        public function getAllUsers()
+		{
+             try {
+                    $strSql = "SELECT IdEstudiante as 'Id', Nombres, Apellidos, 'Estudiante' AS Rol
+                    FROM estudiante
+                    UNION
+                    SELECT idProfesor as 'Id',Nombre, Apellidos, 'Profesor' AS Rol
+                    FROM profesor;";
                     $query = $this->pdo->select($strSql);
                     return $query; 
                 } catch(PDOException $e) {
