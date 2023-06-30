@@ -103,3 +103,7 @@ INSERT INTO `usuario`(`idUsuario`, `correo`, `contrasena`, `documento`) VALUES (
 INSERT INTO `profesor`(`idProfesor`, `Nombre`, `Apellidos`, `Dirección`, `Telefono`, `idUsuario`) VALUES (401, 'Juan', 'Pérez', 'Calle 123', '123456789', 304);
 INSERT INTO `profesor`(`idProfesor`, `Nombre`, `Apellidos`, `Dirección`, `Telefono`, `idUsuario`) VALUES (402, 'María', 'López', 'Avenida 456', '987654321', 305);
 INSERT INTO `profesor`(`idProfesor`, `Nombre`, `Apellidos`, `Dirección`, `Telefono`, `idUsuario`) VALUES (403, 'Carlos', 'González', 'Calle Principal', '456789123', 306);
+
+INSERT INTO `estudiante`(`Nombres`, `Apellidos`, `Fecha_Nacimiento`, `Dirección`, `idCurso`, `idMatricula`, `idAcudiente`) VALUES ('Juan', 'Pérez', '2005-08-10', 'Calle 123', 1, 101, 201);
+INSERT INTO `estudiante`(`Nombres`, `Apellidos`, `Fecha_Nacimiento`, `Dirección`, `idCurso`, `idMatricula`, `idAcudiente`) VALUES ('María', 'López', '2006-02-15', 'Avenida 456', 2, 102, 202);
+INSERT INTO `estudiante`(`Nombres`, `Apellidos`, `Fecha_Nacimiento`, `Dirección`, `idCurso`, `idMatricula`, `idAcudiente`) VALUES ('Carlos', 'González', '2004-11-30', 'Calle Principal', 3, 103, 203);
