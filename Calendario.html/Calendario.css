@@ -1,0 +1,26 @@
+.franja-superior{
+    background-color: #257415;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+}
+.franja-inferior{
+    background-color: #f6f64f;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+}
+h1{
+    text-align: center;
+    color: #091e05;
+}
+#calendario .calendario-block{
+        display: flex;
+        width: 75%;
+        margin-left: 20px;
+        margin-bottom: 0px;
+}
+.calendario{
+        width: 380px;
+        padding-top: 120px;
+} 
