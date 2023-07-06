@@ -27,6 +27,7 @@
                 die();
             }else{
                 try {
+                    $_SESSION['user'] = $dataUser;
                     $this->pdo->insert('Usuario', $dataUser);
                 } catch(PDOException $e) {
                     die($e->getMessage());
@@ -34,22 +35,26 @@
                 try {
                     $LastUserId = $this->getLastIdUser();
                     if(str_contains($data['Correo'], '@sanjosecafasso.com')){
-                        $dataProfesor['Nombre'] = $data['Nombre'];
+                        $dataProfesor['Nombres'] = $data['Nombre'];
                         $dataProfesor['Apellidos'] = $data['Apellidos'];
                         $dataProfesor['Telefono'] = $data['Telefono'];
+                        $dataProfesor['Fecha_Nacimiento'] = $data['Fecha_Nacimiento'];
                         $dataProfesor['idUsuario'] = $LastUserId[0]->id;
+                        $dataProfesor['idRol'] = 1;
                         try {
-                            $this->pdo->insert('Profesor', $dataProfesor);
+                            $this->pdo->insert('Persona', $dataProfesor);
                         } catch(PDOException $e) {
                             die($e->getMessage());
                         }
                     }else{
-                        $dataAcudiente['Nombre'] = $data['Nombre'];
+                        $dataAcudiente['Nombres'] = $data['Nombre'];
                         $dataAcudiente['Apellidos'] = $data['Apellidos'];
                         $dataAcudiente['Telefono'] = $data['Telefono'];
+                        $dataAcudiente['Fecha_Nacimiento'] = $data['Fecha_Nacimiento'];
                         $dataAcudiente['idUsuario'] = $LastUserId[0]->id;
+                        $dataAcudiente['idRol'] = 2;
                 try {
-                            $this->pdo->insert('Acudiente', $dataAcudiente);
+                            $this->pdo->insert('Persona', $dataAcudiente);
                         } catch(PDOException $e) {
                             die($e->getMessage());
                         }
@@ -73,16 +78,63 @@
         public function getAllUsers()
 		{
              try {
-                    $strSql = "SELECT IdEstudiante as 'Id', Nombres, Apellidos, 'Estudiante' AS Rol
-                    FROM estudiante
-                    UNION
-                    SELECT idProfesor as 'Id',Nombre, Apellidos, 'Profesor' AS Rol
-                    FROM profesor;";
+                    $strSql = "SELECT per.*,ro.nombreRol as Rol ,us.* FROM persona per 
+                    INNER JOIN rol ro on ro.idRol = per.idRol
+                    INNER JOIN usuario us on us.idUsuario=per.idUsuario";
                     $query = $this->pdo->select($strSql);
                     return $query; 
                 } catch(PDOException $e) {
                     die($e->getMessage());
                 }
         }
+        public function getUserById($id)
+		{
+             try {
+                    $strSql = "SELECT per.*,ro.nombreRol,us.correo,us.documento FROM persona per 
+                    INNER JOIN rol ro on ro.idRol = per.idRol 
+                    INNER JOIN usuario us on us.idUsuario = per.idUsuario
+                    WHERE idPersona=".$id;
+                    $query = $this->pdo->select($strSql);
+                    return $query; 
+                } catch(PDOException $e) {
+                    die($e->getMessage());
+                }
+        }
+        public function updateUser($dataUpdate)
+    {
+        try {
+            $strWhere = 'idUsuario = '. $dataUpdate['idUsuario'];
+            $dataUsuario['correo'] = $dataUpdate['Correo'];
+            $this->pdo->update('usuario',$dataUsuario, $strWhere);
+            try {
+                $strWhere = 'idPersona = '.$dataUpdate['idPersona'];
+                $data['Nombres'] = $dataUpdate['Nombres'];
+                $data['Apellidos'] = $dataUpdate['Apellidos'];
+                $data['Direccion'] = $dataUpdate['Direccion'];
+                $data['Telefono'] = $dataUpdate['Telefono'];
+                $data['Fecha_Nacimiento'] = $dataUpdate['Fecha_Nacimiento'];
+                $this->pdo->update('persona',$data, $strWhere);
+            } catch(PDOException $e) {
+                die($e->getMessage());
+            }
+        } catch(PDOException $e) {
+            die($e->getMessage());
+        }
+    }
+    public function deletePersonById($idPersona,$idUsuario)
+		{
+			try {
+				$strWherePerson = 'idPersona = '. $idPersona;
+				$this->pdo->delete('persona', $strWherePerson);
+                try {
+                    $strWhereUser = 'idUsuario = '. $idUsuario;
+                    $this->pdo->delete('usuario', $strWhereUser);
+                } catch(PDOException $e) {
+                    die($e->getMessage());
+                }	
+			} catch(PDOException $e) {
+				die($e->getMessage());
+			}	
+		}
 
 }

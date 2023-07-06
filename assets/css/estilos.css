@@ -103,23 +103,12 @@
     color: var(---cnegro)
 }
 
-.modal_close{
-    background-color: #F26250;
-    color: white;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    font-size: 20px;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-}
 
 .modal_container{
     margin: auto;
     max-width: 600px;
     width: 30%;
-    background-color: rgb(235, 243, 235);;
+    background-color: rgb(255 255 255 / 0%);
     border-radius: 6px;
     padding: 20px;
     display: flex;

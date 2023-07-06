@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos del dashboard */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap; /* Nueva línea agregada */
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  background-color: #257415;
+  padding: 20px;
+  height: 100vh;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap; /* Nueva línea agregada */
+  overflow-x: auto; /* Nueva línea agregada */
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: 0 0 100%;
+    padding: 10px;
+    height: auto;
+  }
+
+  .sidebar ul {
+    margin: 10px 0;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+    overflow-x: auto;
+    display: block; /* Nueva línea agregada */
+  }
+
+  th,
+  td {
+    padding: 5px;
+    display: inline-block; /* Nueva línea agregada */
+  }
+}

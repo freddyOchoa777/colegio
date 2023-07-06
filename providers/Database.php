@@ -76,7 +76,6 @@
 				foreach ($data as $key => $value) {
 					$strSql->bindValue(":$key", $value);
 				}
-
 				$strSql->execute();
 
 			} catch(PDOException $e) {
@@ -103,7 +102,7 @@
 				foreach ($data as $key => $value) {
 					$strSql->bindValue(":$key", $value);
 				}
-
+				var_dump($strSql);
 				$strSql->execute();
 			} catch(PDOException $e) {
 				die($e->getMessage());
