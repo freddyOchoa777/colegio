@@ -61,9 +61,7 @@ if (isset($_POST['decrease'])) {
         }
 
         p {
-            font-size:
-                <?php echo $fontSize; ?>
-                px;
+            font-size:<?php echo $fontSize;?>px;
         }
     </style>
 </head>

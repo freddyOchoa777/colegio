@@ -22,7 +22,16 @@ class HomeController
 		if ($registerUser === true) {
 			header('Location: ?controller=login&method=index');
 		} else {
-			require "home.php";
+			require "views/registro/Registrate.php";
+			?>
+			<script type="text/javascript">
+				Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'Las contraseñas no son iguales'
+				})	
+			</script>
+			<?php
 		}
 	}
 	public function RegisterScreen()

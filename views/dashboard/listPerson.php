@@ -1,14 +1,14 @@
 <div class="content">
-      <div class="menu">
-        <div class="d-flex justify-content-between">
-          <span>Bienvenid@,
-            <?php echo ($email) ?>
-          </span>
-          <form method="POST" action="?controller=Home">
-            <button class="btn btn-danger">Salir</button>
-          </form>
-        </div>
-      </div>
+  <div class="menu">
+    <div class="d-flex justify-content-between">
+      <span>Bienvenid@,
+        <?php echo ($email) ?>
+      </span>
+      <form method="POST" action="?controller=Home">
+        <button class="btn btn-danger">Salir</button>
+      </form>
+    </div>
+  </div>
 
   <h1>Lista de Usuarios</h1>
   <div class="table-container">
@@ -61,38 +61,36 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
- $(document).ready(function () {
-  $('#userTable').DataTable();
+  $(document).ready(function () {
+    $('#userTable').DataTable();
 
-  $('.btn-tbl-eliminar-ajax').click(function (event) {
-    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-    var deleteUrl = $(this).attr('href'); // Obtiene la URL de eliminación del atributo href del enlace
+    $('.btn-tbl-eliminar-ajax').click(function (event) {
+      event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+      var deleteUrl = $(this).attr('href'); // Obtiene la URL de eliminación del atributo href del enlace
 
-    Swal.fire({
-      title: '¿Estás seguro de que quieres eliminar?',
-      text: "No podrás revertir este cambio.",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Si, quiero eliminarlo.'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Realizar la solicitud AJAX al servidor
-        $.ajax({
-          url: deleteUrl,
-          type: 'POST',
-          success: function (response) {
-            Swal.fire('Eliminado!', 'El usuario fue eliminado del sistema', 'success');
-            location.reload();
-          },
-        });
-        console.log(response);
-        console.log("jsdnakdkas")
-      }
+      Swal.fire({
+        title: '¿Estás seguro de que quieres eliminar?',
+        text: "No podrás revertir este cambio.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, quiero eliminarlo.'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Realizar la solicitud AJAX al servidor
+          $.ajax({
+            url: deleteUrl,
+            type: 'POST',
+            success: function (response) {
+              Swal.fire('Eliminado!', 'El usuario fue eliminado del sistema', 'success');
+              location.reload();
+            },
+          });
+        }
+      });
     });
   });
-});
 </script>
 </body>
 

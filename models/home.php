@@ -23,8 +23,7 @@
             $dataUser['Correo'] = $data['Correo'];
             $dataUser['Contrasena'] = $data['Contrasena'];
             if ($data['Contrasena'] !== $data['Contraseñados']) {
-                echo("LA CONTRASEÑA NO ES LA MISMA");
-                die();
+                return false;
             }else{
                 try {
                     $_SESSION['user'] = $dataUser;
@@ -35,10 +34,11 @@
                 try {
                     $LastUserId = $this->getLastIdUser();
                     if(str_contains($data['Correo'], '@sanjosecafasso.com')){
-                        $dataProfesor['Nombres'] = $data['Nombre'];
+                        $dataProfesor['Nombres'] = $data['Nombres'];
                         $dataProfesor['Apellidos'] = $data['Apellidos'];
                         $dataProfesor['Telefono'] = $data['Telefono'];
                         $dataProfesor['Fecha_Nacimiento'] = $data['Fecha_Nacimiento'];
+                        $dataProfesor['Direccion'] = $data['Direccion'];
                         $dataProfesor['idUsuario'] = $LastUserId[0]->id;
                         $dataProfesor['idRol'] = 1;
                         try {
@@ -47,9 +47,10 @@
                             die($e->getMessage());
                         }
                     }else{
-                        $dataAcudiente['Nombres'] = $data['Nombre'];
+                        $dataAcudiente['Nombres'] = $data['Nombres'];
                         $dataAcudiente['Apellidos'] = $data['Apellidos'];
                         $dataAcudiente['Telefono'] = $data['Telefono'];
+                        $dataAcudiente['Direccion'] = $data['Direccion'];
                         $dataAcudiente['Fecha_Nacimiento'] = $data['Fecha_Nacimiento'];
                         $dataAcudiente['idUsuario'] = $LastUserId[0]->id;
                         $dataAcudiente['idRol'] = 2;
