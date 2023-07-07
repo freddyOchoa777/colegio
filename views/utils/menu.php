@@ -39,12 +39,11 @@
 
             <li><a href="">Circulares</a>
                 <ul>
-                <li><a href="">Pediente</a></li>
-                <li><a href="">Pediente</a>
+                <li><a href="">Pendiente</a></li>                
             </li>
         </ul>
 
-        <li><a href=" Mapa">Contactanos</a>
+        <li><a href=" Mapa">Contáctanos</a>
             <ul>
             </ul>
 </div>

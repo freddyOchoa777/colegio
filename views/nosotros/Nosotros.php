@@ -42,7 +42,7 @@
             disposiciones legales complementarias, y una política Institucional, libremente elegida, en donde los
             proyectos de aula
             contribuyen delinear otra característica importante del COLEGIO SAN JOSÉ DE CAFASSO: La acogida a formas
-            dianamicas, participativas y creativas, complementando la formación mediante actividades artísticas, lúdicas
+            dinámicas, participativas y creativas, complementando la formación mediante actividades artísticas, lúdicas
             y de
             investigación.
           </p>
@@ -133,7 +133,7 @@
           primeros años de vida, encaminándolo hacia una convivencia que le permita vivenciar los valores en los cuales
           se
           encuentra encaminadas la institución desarrollando el énfasis el cual está enfocado en el desarrollo de las
-          actividades
+          actividades.
         </p>
       </article>
     </div>
@@ -173,7 +173,7 @@
   </center>
 
   <div class="simbolos">
-    <h2>SIMBOLOS</h2>
+    <h2>SÍMBOLOS</h2>
     <div id="centro"></div>
     <section id="simbolos">
       <div class="col-simbolos">
