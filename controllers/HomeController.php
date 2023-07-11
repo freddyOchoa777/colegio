@@ -40,7 +40,7 @@ class HomeController
 	}
 	public function GetMatriculaForm()
 	{
-		require "Matricula.php";
+		require "views/formularios/matricula.php";
 	}
 	public function getNosotros()
 	{
@@ -88,6 +88,10 @@ class HomeController
 		require "views/utils/menu.php";
 		require "views/admisiones/Admisiones.php";
 		require "views/utils/footer.php";
+	}
+	public function GetInscripcionFomr()
+	{
+		require "views/formularios/inscripcion.php";
 	}
 }
 ?>

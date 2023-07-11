@@ -70,7 +70,7 @@
         </div>
         <div class="col-md-3">
             <button class="button type1">
-                <span class="btn-txt"><a href="?controller=Home&method=GetMatriculaForm"> Inscripción </a></span>
+                <span class="btn-txt"><a href="?controller=Home&method=GetInscripcionFomr"> Inscripción </a></span>
             </button>
         </div>
         <div class="col-md-3">
