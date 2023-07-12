@@ -28,11 +28,11 @@
             <p>Teléfono 2</p>
             <h3>Redes Sociales: </h3>
             <ul>
-                <li><a style="color: #fff;" href="#"><i style="color: #fff;" class="fab fa-facebook-square icon"></i>
+                <li><a style="color: #fff;" href="#"><i style="color: #fff;" title="Facebook" class="fab fa-facebook-square icon"></i>
                         Facebook</a></li>
-                <li><a style="color: #fff;" href="#"><i style="color: #fff;" class="fab fa-twitter-square icon"></i>
+                <li><a style="color: #fff;" href="#"><i style="color: #fff;" title="Twitter" class="fab fa-twitter-square icon"></i>
                         Twitter</a></li>
-                <li><a style="color: #fff;" href="#"><i style="color: #fff;" class="fab fa-instagram-square icon"></i>
+                <li><a style="color: #fff;" href="#"><i style="color: #fff;" title="Instagram" class="fab fa-instagram-square icon"></i>
                         Instagram</a></li>
             </ul>
         </div>
