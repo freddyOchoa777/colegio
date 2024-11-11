@@ -1,14 +1,4 @@
-<div class="content">
-      <div class="menu">
-        <div class="d-flex justify-content-between">
-          <span>Bienvenid@, <?php echo ($email) ?></span>
-          <form method="POST" action="?controller=Home">
-            <button class="btn btn-danger">Salir</button>
-          </form>
-        </div>
-      </div>
-
-      <h1>Lista de Usuarios</h1>
+  <h1>Lista de Usuarios</h1>
       <div class="table-container">
         <table id="userTable" class="table">
           <thead>

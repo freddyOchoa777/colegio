@@ -8,6 +8,81 @@ CREATE TABLE IF NOT EXISTS `Rol` (
   PRIMARY KEY (`idRol`)
 );
 
+CREATE TABLE IF NOT EXISTS `inscripciones` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `nombre_completo` VARCHAR(100) NOT NULL,
+    `numero_identificacion` INTEGER(20) NOT NULL,
+    `fecha_nacimiento` DATE NOT NULL,
+    `genero` ENUM('Masculino', 'Femenino', 'Otro') NOT NULL,
+    `direccion` VARCHAR(255) NOT NULL,
+    `telefono_contacto` VARCHAR(15) NOT NULL,
+    `correo_electronico` VARCHAR(100),
+    `tipo_representante` ENUM('Padre', 'Madre', 'Tutor') NOT NULL,
+    `nombre_representante` VARCHAR(15) NOT NULL,
+    `telefono_representante` VARCHAR(15) NOT NULL,
+    `correo_representante` VARCHAR(100),
+    `profesion_representante` VARCHAR(50),
+    `asistencia_colegio_anterior` BOOLEAN NOT NULL, -- 1 para Sí, 0 para No
+    `colegio_anterior` VARCHAR(100), -- Solo si ha asistido previamente
+    `grado_inscrito` VARCHAR(50) NOT NULL,
+    `tiene_necesidad_educativa` BOOLEAN NOT NULL, -- 1 para Sí, 0 para No
+    `descripcion_necesidad` VARCHAR(255) -- Solo si tiene alguna necesidad educativa
+);
+
+CREATE TABLE registro_academico (
+    periodo VARCHAR(50),
+    fecha DATE,
+    jornada VARCHAR(20),
+    primer_nombre VARCHAR(50),
+    segundo_nombre VARCHAR(50),
+    primer_apellido VARCHAR(50),
+    segundo_apellido VARCHAR(50),
+    fecha_nacimiento DATE,
+    documento_estudiante INT,
+    sexo VARCHAR(10),
+    ciudad_residencia VARCHAR(50),
+    direccion VARCHAR(100),
+    barrio VARCHAR(50),
+    grado_aspirado VARCHAR(20),
+    colegio_procedencia VARCHAR(100),
+    tipo_documento VARCHAR(20),
+    edad_actual INT,
+    eps VARCHAR(50),
+    grupo_sanguineo CHAR(2),
+    rh VARCHAR(10),
+    quien_vive VARCHAR(20),
+    estrato INT,
+    hermanos_institucion INT,
+    enfermedades_actuales TEXT,
+    medicamento_permanente TEXT,
+    padre_nombres VARCHAR(100),
+    padre_apellidos VARCHAR(100),
+    padre_direccion VARCHAR(100),
+    padre_email VARCHAR(100),
+    padre_celular VARCHAR(20),
+    padre_telefono_fijo VARCHAR(20),
+    padre_profesion VARCHAR(50),
+    padre_empresa VARCHAR(100),
+    padre_cargo VARCHAR(50),
+    padre_telefono_empresa VARCHAR(20),
+    padre_direccion_empresa VARCHAR(100),
+    padre_estado_civil VARCHAR(20),
+    madre_nombres VARCHAR(100),
+    madre_apellidos VARCHAR(100),
+    madre_direccion VARCHAR(100),
+    madre_email VARCHAR(100),
+    madre_celular VARCHAR(20),
+    madre_telefono_fijo VARCHAR(20),
+    madre_profesion VARCHAR(50),
+    madre_empresa VARCHAR(100),
+    madre_cargo VARCHAR(50),
+    madre_telefono_empresa VARCHAR(20),
+    madre_direccion_empresa VARCHAR(100),
+    madre_estado_civil VARCHAR(20),
+    acudiente VARCHAR(20),
+    responsable_economico VARCHAR(20)
+);
+
 CREATE TABLE IF NOT EXISTS `Usuario` (
   `idUsuario` INT NOT NULL AUTO_INCREMENT,
   `correo` VARCHAR(45) NOT NULL,
@@ -88,3 +163,4 @@ INSERT INTO `matricula`(`idMatricula`, `Fecha`) VALUES (103, '2023-01-03');
 INSERT INTO `rol`(`idRol`, `nombreRol`) VALUES (1, 'Profesor');
 INSERT INTO `rol`(`idRol`, `nombreRol`) VALUES (2, 'Acudiente');
 INSERT INTO `rol`(`idRol`, `nombreRol`) VALUES (3, 'Estudiante');
+INSERT INTO `rol`(`idRol`, `nombreRol`) VALUES (4, 'Invitado');

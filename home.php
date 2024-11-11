@@ -27,43 +27,6 @@ if (isset($_POST['decrease'])) {
     <link rel="stylesheet" href="assets/css/estilos.css">
     <title>Colegio San José de Cafasso</title>
     <script src="https://kit.fontawesome.com/c208b720fb.js" crossorigin="anonymous"></script>
-    <!-- <div class="contenedor">
-        <form action="">
-            <a href="" class="Docmasoft">DOCMASOFT</a>
-            <input type="text"><input type="button" value="Buscar">
-        </form>
-        <div><a href="">Iniciar Sesión</a></div>            
-    </div>   -->
-    <style>
-        .floating-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-        }
-
-        .floating-button button {
-            display: block;
-            width: 40px;
-            height: 40px;
-            border: none;
-            border-radius: 50%;
-            font-size: 18px;
-            color: #fff;
-            background-color: #333;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .floating-button button:hover {
-            opacity: 1;
-            cursor: pointer;
-        }
-
-        p {
-            font-size:<?php echo $fontSize;?>px;
-        }
-    </style>
 </head>
 
 <body>

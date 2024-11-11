@@ -14,14 +14,14 @@ class LoginController
 
 	public function index()
 	{
-		$dataUsers = $this->modelHome->getAllUsers();
-		if(isset($_SESSION['user']->correo)){
+		if (isset($_SESSION['user'])) {
 			$email = $_SESSION['user']->correo;
-		}else{
-			$email = $_SESSION['user']['Correo'];
+			$dataUsers = $this->modelHome->getAllUsers();
+			require "views/dashboard/dashboard.php";
+			require "views/dashboard/listPerson.php";
+		} else {
+			header('Location: ?controller=home');
 		}
-		require "views/dashboard/dashboard.php";
-		require "views/dashboard/listPerson.php";
 	}
 
 	public function validarCredenciales()
@@ -31,19 +31,16 @@ class LoginController
 			$dataUsers = $this->modelHome->getAllUsers();
 			header('Location: ?controller=login&method=index');
 		} else {
-			require "views/utils/menu.php";
-			require "home.php";
-			require "views/utils/footer.php";
+			require "views/login/Login.php";
 			?>
 			<script type="text/javascript">
 				Swal.fire({
-				icon: 'error',
-				title: 'Oops...',
-				text: 'Las credenciales son incorrectas'
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Las credenciales son incorrectas'
 				})	
 			</script>
 			<?php
-
 		}
 	}
 	public function forgotPassword()
@@ -52,12 +49,25 @@ class LoginController
 	}
 	public function exit()
 	{
-		if(isset($_SESSION['user'])){
-			session_destroy();
-			header('Location: ?controller=home');
-		}else{
-			header('Location: ?controller=home');
+		if (session_status() == PHP_SESSION_NONE) {
+			session_start();
 		}
+		$_SESSION = [];
+		session_destroy();
+		if (ini_get("session.use_cookies")) {
+			$params = session_get_cookie_params();
+			setcookie(
+				session_name(),
+				'',
+				time() - 42000,
+				$params["path"],
+				$params["domain"],
+				$params["secure"],
+				$params["httponly"]
+			);
+		}
+		header('Location: ?controller=home');
+		exit();
 	}
 	public function sendEmail()
 	{
@@ -70,10 +80,10 @@ class LoginController
 				icon: 'success',
 				title: '¡Correo enviado!',
 				text: 'Se ha enviado un correo electrónico a <?php echo $_POST["correo"] ?> para recuperar la contraseña.',
-		confirmButtonText: 'OK',
-	});
-</script>
-<?php
+				confirmButtonText: 'OK',
+			});
+		</script>
+		<?php
 	}
 }
 ?>

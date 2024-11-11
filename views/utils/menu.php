@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/styleIndex.css">
     <link rel="stylesheet" href="assets/css/styleLogin.css">
     <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="shortcut icon" href="assets/img/Noticias/Logo_San_José_de_Cafasso.png" />
     <title>Colegio San José de Cafasso</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/c208b720fb.js" crossorigin="anonymous"></script>
@@ -17,7 +18,7 @@
     <div class="button-group">
       <input class="buscador-class" type="text" name="" id="" placeholder="Buscar">
       <button class="btn-class">Buscar</button>
-      <button class="btn-class-login">Iniciar Sesión</button>
+      <button class="btn-class-login"><a href="?controller=Home&method=Login">Iniciar Sesión</a></button>
       <button class="btn-class-login"><a href="?controller=Home&method=RegisterScreen">Regístrate</a></button>
     </div>
   </div>
@@ -47,15 +48,3 @@
             <ul>
             </ul>
 </div>
-<section class="modal">
-        <div class="modal_container">
-            <button class="modal_close">X</button>
-            <form class="login" action="?controller=Login&method=validarCredenciales" method="POST" class="form">
-                <p class="heading">Iniciar sesión</p>
-                <input class="inputLogin" name="Correo" required type="Correo" placeholder="Correo" type="text">
-                <input class="inputLogin" name="Contraseña" required placeholder="Contraseña" type="password">
-                <p> <a href="?controller=Login&method=forgotPassword">¿Olvidaste tu contraseña?</a></p>
-                <button type="submit" style="border-color: black;"class="btn">Enviar</button>
-            </form>
-        </div>
-    </section>

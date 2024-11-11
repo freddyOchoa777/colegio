@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Registro</title>
+    <title>Iniciar Sesión</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- MATERIAL DESIGN ICONIC FONT -->
@@ -19,7 +19,7 @@
             align-items: flex-end;
             margin-top: 15px;
         }
-        .btn-volver, .btn-registrar {
+        .btn-volver, .btn-iniciar-sesion {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -30,16 +30,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 45px; /* Altura uniforme */
+            height: 45px;
             transition: background-color 0.3s;
         }
         .btn-volver {
             background-color: #4A90E2;
         }
-        .btn-registrar {
+        .btn-iniciar-sesion {
             background-color: #257415;
         }
-        .btn-registrar i, .btn-volver i {
+        .btn-iniciar-sesion i, .btn-volver i {
             margin-left: 5px;
         }
         .btn-volver:hover {
@@ -67,45 +67,27 @@
             <div class="image-holder">
                 <img src="assets/img/Noticias/Logo_San_José_de_Cafasso.png" style="padding-top: 50px;" alt="">
             </div>
-            <form method="POST" action="?controller=Home&method=registerUser">
-                <h3>Formulario de registro</h3>
-                
-                <div class="form-group">
-                    <input type="text" required placeholder="Nombres" name="Nombres" class="form-control">
-                    <input type="text" required placeholder="Apellidos" name="Apellidos" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                    <input type="text" required placeholder="Documento de identidad" name="Documento" class="form-control">
-                    <input type="text" required placeholder="Dirección" name="Direccion" class="form-control">
-                </div>
+            <form method="POST" action="?controller=Login&method=validarCredenciales">
+                <h3>Iniciar Sesión</h3>
                 
                 <div class="form-group">
                     <input type="email" required placeholder="Email" name="Correo" class="form-control">
-                    <input type="text" required placeholder="Teléfono" name="Telefono" class="form-control">
-                </div>
-                
-                <div class="form-wrapper">
-                    Fecha de nacimiento:
-                    <input type="date" required placeholder="Fecha de Nacimiento" name="Fecha_Nacimiento" class="form-control">
-                    <i class="zmdi zmdi-date"></i>
                 </div>
                 
                 <div class="form-group">
-                    <input type="password" required placeholder="Contraseña" name="Contrasena" class="form-control">
-                    <input type="password" required placeholder="Confirmar contraseña" name="Contraseñados" class="form-control">
+                    <input type="password" required placeholder="Contraseña" name="Contraseña" class="form-control">
                 </div>
                 
                 <div class="form-checkbox">
-                    <input type="checkbox" required name="terms" id="terms">
-                    <label for="terms">Acepto términos y condiciones</label>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Recordarme</label>
                 </div>
                 
                 <div class="button-group">
                     <a href="?controller=home" class="btn-volver">Volver
                         <i class="zmdi zmdi-arrow-left"></i>
                     </a>
-                    <button type="submit" class="btn-registrar">Registrar
+                    <button type="submit" class="btn-iniciar-sesion">Iniciar Sesión
                         <i class="zmdi zmdi-arrow-right"></i>
                     </button>
                 </div>

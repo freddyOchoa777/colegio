@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/Nosotros.css">
+  <link rel="shortcut icon" href="assets/img/Noticias/Logo_San_José_de_Cafasso.png" />
 </head>
 
 <body>

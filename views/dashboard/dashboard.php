@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
-
+  <link rel="shortcut icon" href="assets/img/Noticias/Logo_San_José_de_Cafasso.png" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -29,4 +29,15 @@
         <li><a href="#"><i class="fas fa-envelope"></i> Contacto</a></li>
       </ul>
     </div>
+    <div class="content">
+  <div class="menu">
+    <div class="d-flex justify-content-between">
+      <span>Bienvenid@,
+        <?php echo ($email) ?>
+      </span>
+      <form method="POST" action="?controller=login&method=exit">
+        <button class="btn btn-danger">Salir</button>
+      </form>
+    </div>
+  </div>
     <!-- Contenido principal -->
